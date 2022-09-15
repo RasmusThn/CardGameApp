@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameConsole", "CardGame\CardGameConsole.csproj", "{6B25DB58-4496-477F-9B03-61E9CF6801F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGameConsole", "CardGame\CardGameConsole.csproj", "{6B25DB58-4496-477F-9B03-61E9CF6801F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardLibrary", "CardLibrary\CardLibrary.csproj", "{092D90A1-B971-42C2-9A5C-46D77B9BE323}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardLibrary", "CardLibrary\CardLibrary.csproj", "{092D90A1-B971-42C2-9A5C-46D77B9BE323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameBlazor.Server", "CardGameBlazor\Server\CardGameBlazor.Server.csproj", "{E06272F3-3C23-4226-9203-C65650DDFA93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameBlazor.Client", "CardGameBlazor\Client\CardGameBlazor.Client.csproj", "{889E3C47-5E81-4079-841F-3AD0ACB46171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameBlazor.Shared", "CardGameBlazor\Shared\CardGameBlazor.Shared.csproj", "{8F26A4BB-C6C1-4F49-9B5D-A6AE415362FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{092D90A1-B971-42C2-9A5C-46D77B9BE323}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{092D90A1-B971-42C2-9A5C-46D77B9BE323}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{092D90A1-B971-42C2-9A5C-46D77B9BE323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E06272F3-3C23-4226-9203-C65650DDFA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E06272F3-3C23-4226-9203-C65650DDFA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E06272F3-3C23-4226-9203-C65650DDFA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E06272F3-3C23-4226-9203-C65650DDFA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889E3C47-5E81-4079-841F-3AD0ACB46171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889E3C47-5E81-4079-841F-3AD0ACB46171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889E3C47-5E81-4079-841F-3AD0ACB46171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889E3C47-5E81-4079-841F-3AD0ACB46171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F26A4BB-C6C1-4F49-9B5D-A6AE415362FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F26A4BB-C6C1-4F49-9B5D-A6AE415362FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F26A4BB-C6C1-4F49-9B5D-A6AE415362FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F26A4BB-C6C1-4F49-9B5D-A6AE415362FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

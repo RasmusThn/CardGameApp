@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CardLibrary.Enums
 {
-    public enum CardColors
+    public enum CardSuit
     {
         Hearts,
         Clubs,
