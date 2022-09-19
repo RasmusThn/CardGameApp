@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\CardLibrary\CardLibrary.csproj" />
-    <ProjectReference Include="..\Shared\CardGameBlazor.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
