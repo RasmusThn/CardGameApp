@@ -8,18 +8,18 @@ namespace CardLibrary.Enums
 {
     public enum CardNumber
     {   
-        Two = 50,
-        Three = 51,
-        Four = 52,
-        Five = 53,
-        Six = 54,
-        Seven = 55,
-        Eight = 56,
-        Nine = 57,
-        Ten = 88,
-        Jack = 74,
-        Queen = 81,
-        King = 75,
-        Ace = 65
+        Two = 2,
+        Three = 3,
+        Four = 4,
+        Five = 5,
+        Six = 6,
+        Seven = 7,
+        Eight = 8,
+        Nine = 9,
+        Ten = 10,
+        Jack = 11,
+        Queen = 12,
+        King = 13,
+        Ace = 14
     }
 }

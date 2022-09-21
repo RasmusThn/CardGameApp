@@ -14,5 +14,7 @@ namespace Repository
             : base(repositoryContext)
         {
         }
+
+        public void CreateCardDeck(CardDeck cardDeck) => Create(cardDeck);
     }
 }

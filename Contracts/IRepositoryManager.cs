@@ -3,7 +3,7 @@
 public interface IRepositoryManager
 {
     ICardRepository Card { get; }
-    ICardDeckRepository Deck { get; }
+    ICardDeckRepository CardDeck { get; }
     
-    void Save();
+   Task SaveAsync();
 }

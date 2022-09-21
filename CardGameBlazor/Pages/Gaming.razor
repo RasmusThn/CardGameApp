@@ -1,0 +1,11 @@
+﻿@page "/gamingpage"
+
+<h3>GamingPage</h3>
+
+<button @onclick="LoadRandomCard">Random</button>
+
+@if (_showCard)
+{
+
+    <CardComponent Card="@CardToSend"></CardComponent>
+}

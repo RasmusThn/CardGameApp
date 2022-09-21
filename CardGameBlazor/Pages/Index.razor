@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@if (CardsList is null)
+{
+    <p>Loading..</p>
+}
+else{
+    foreach (var item in CardsList)
+    {
+        <img width="150" height="241" src="@item.ImgUrl" />
+    }
+}
+
+
+
+
+
+
+
+<PageTitle>Index</PageTitle>
+

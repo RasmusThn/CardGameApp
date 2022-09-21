@@ -14,5 +14,6 @@ namespace Entites.Models
         public CardNumber Number { get; set; }
         public bool IsActive { get; set; }
         public string ImgUrl { get; set; }
+
     }
 }

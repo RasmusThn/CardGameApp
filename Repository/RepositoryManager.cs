@@ -21,7 +21,7 @@ namespace Repository
            CardDeckRepository(repositoryContext));
         }
         public ICardRepository Card => _cardRepository.Value;
-        public ICardDeckRepository Deck => _cardDeckRepository.Value;
-        public void Save() => _repositoryContext.SaveChanges();
+        public ICardDeckRepository CardDeck => _cardDeckRepository.Value;
+        public async Task SaveAsync() => await _repositoryContext.SaveChangesAsync();
     }
 }
