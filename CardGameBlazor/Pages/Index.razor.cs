@@ -6,7 +6,7 @@ namespace CardGameBlazor.Pages
 {
     public partial class Index
     {
-        public List<CardDto> CardsList { get; set; }
+        public List<CardDto>? CardsList { get; set; }
         [Inject]
         public ICardHttpService? CardService { get; set; }
 

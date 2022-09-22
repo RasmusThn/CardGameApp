@@ -12,6 +12,7 @@ namespace Repository
         private readonly RepositoryContext _repositoryContext;
         private readonly Lazy<ICardRepository> _cardRepository;
         private readonly Lazy<ICardDeckRepository> _cardDeckRepository;
+        private readonly Lazy<IHandHistoryRepository> _handHistoryRepository;
         public RepositoryManager(RepositoryContext repositoryContext)
         {
             _repositoryContext = repositoryContext;
@@ -19,9 +20,12 @@ namespace Repository
             CardRepository(repositoryContext));
             _cardDeckRepository = new Lazy<ICardDeckRepository>(() => new
            CardDeckRepository(repositoryContext));
+            _handHistoryRepository = new Lazy<IHandHistoryRepository>(() => new
+            HandHistoryRepository(repositoryContext));
         }
         public ICardRepository Card => _cardRepository.Value;
         public ICardDeckRepository CardDeck => _cardDeckRepository.Value;
+        public IHandHistoryRepository HandHistory => _handHistoryRepository.Value;
         public async Task SaveAsync() => await _repositoryContext.SaveChangesAsync();
     }
 }

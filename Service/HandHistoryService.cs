@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Contracts;
+using Entites.Models;
 using Service.Contracts;
+using Shared.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +22,17 @@ namespace Service
             _loggerManager = loggerManager;
             _mapper = mapper;
 
+        }
+
+        public async Task<HandHistoryDto> CreateHandHistory(HandHistoryDto handHistory)
+        {
+            var handHistoryEntity = _mapper.Map<HandHistory>(handHistory);
+
+             _repository.HandHistory.CreateHandHistory(handHistoryEntity);
+            await _repository.SaveAsync();
+           
+            var HandHistoryReturn = _mapper.Map<HandHistoryDto>(handHistoryEntity);
+            return HandHistoryReturn;
         }
     }
 }

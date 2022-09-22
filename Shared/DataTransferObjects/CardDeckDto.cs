@@ -6,5 +6,9 @@ using System.Threading.Tasks;
 
 namespace SharedDtos.DataTransferObjects
 {
-    public record CardDeckDto(List<CardDto> CardList, int CardAmount);
+    public record CardDeckDto
+    {
+        public List<CardDto> CardList { get; set; }
+        public int CardAmount { get; set; }
+    }
 }

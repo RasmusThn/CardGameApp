@@ -2,10 +2,24 @@
 
 <h3>GamingPage</h3>
 
-<button @onclick="LoadRandomCard">Random</button>
+<button @onclick="TakeCards">Take</button>
 
 @if (_showCard)
 {
+    <div class="form-check">
+        @foreach (var card in CardsOnHand)
+        {
+            <label class="container">
 
-    <CardComponent Card="@CardToSend"></CardComponent>
+                <input class="form-check-input" type="checkbox"
+                @bind-value="@card.IsActive">
+                
+
+                <CardComponent Card="@card"></CardComponent>
+               
+            </label>
+
+
+        }
+    </div>
 }

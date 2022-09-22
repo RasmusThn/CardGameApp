@@ -11,7 +11,7 @@ namespace CardGameBlazor.HttpService
 
         public async Task<List<CardDto>> GetAllCardsAsync()
         {
-            var cards = await _httpClient.GetFromJsonAsync<IEnumerable<CardDto>>("cards");
+            var cards = await _httpClient.GetFromJsonAsync<List<CardDto>>("cards");
 
             return cards.ToList();
         }
