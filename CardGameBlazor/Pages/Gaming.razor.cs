@@ -12,50 +12,85 @@ namespace CardGameBlazor.Pages
         public ICardHttpService? CardHttpService { get; set; }
         [Inject]
         public IHandHistoryHttpService? HandHistoryHttpService { get; set; }
-        public List<CardDto> CardsOnHand { get; set; }
-        public List<CardDto> CardsDeckList { get; set; } = new List<CardDto>();
+        public List<CardDto> CardsOnHand { get; set; } = new();
+        public List<CardDto> CardsDeckList { get; set; } = new();
         public List<CardDto> TossedCards { get; set; } = new();
+        public HandHistoryDto HandHistory { get; set; } = new();
+        private int _roundCounter;
+        
 
-        public HandHistoryDto HandHistory { get; set; } =new HandHistoryDto();
-        private int counter;
         protected override async Task OnInitializedAsync()
         {
+
+            CardsDeckList = await CardHttpService.GetAllCardsAsync();
             ShuffleCardList();
 
-            
-            
         }
         public async Task TakeCards()
         {
-            CardsOnHand = new List<CardDto>();
-            CardsOnHand.AddRange(CardsDeckList.Take(5));
+            
+            int cardsToAdd = 5 - CardsOnHand.Count;
+            //Adds Remaining cards from deck and shuffles old ones
+            if (CardsDeckList.Count < cardsToAdd)
+            {
+                int cardsLeft = CardsDeckList.Count;
+                CardsOnHand.AddRange(CardsDeckList.Take(cardsLeft));
+                CardsDeckList.RemoveRange(0, cardsLeft);
+                ShuffleTossedCards();
+                CardsOnHand.AddRange(CardsDeckList.Take(cardsToAdd - cardsLeft));
+            }
+            //Adds new cards when enough i Deck
+            else
+            {
+                CardsOnHand.AddRange(CardsDeckList.Take(cardsToAdd));
 
-            TossedCards.AddRange(CardsOnHand);
-            CardsDeckList.RemoveRange(0, 5);
-
+                CardsDeckList.RemoveRange(0, cardsToAdd);
+            }
+            
             await AddCardsToHandHistory();
 
             _showCard = true;
             StateHasChanged();
         }
-       public async Task ShuffleCardList()
+        private void ShuffleTossedCards()
         {
-            
-            CardsDeckList = await CardHttpService.GetAllCardsAsync();
+            CardsDeckList.AddRange(TossedCards);
+            ShuffleCardList();
+            TossedCards.Clear();
+        }
+
+        private void TossCards()
+        {
+
+            List<CardDto> tossed = CardsOnHand.Where(t => t.IsActive == true).ToList();
+
+            CardsOnHand.RemoveAll(t => t.IsActive == true);
+
+            foreach (var toss in tossed)
+            {
+                toss.IsActive = false;
+                TossedCards.Add(toss);
+            }
+
+            TakeCards();
+
+        }
+        private void ShuffleCardList()
+        {
             var rnd = new Random();
             CardsDeckList = CardsDeckList.OrderBy(item => rnd.Next()).ToList();
         }
-        async Task AddCardsToHandHistory()
+        public async Task AddCardsToHandHistory()
         {
-            HandHistory.CardIdOne =Convert.ToInt32(CardsOnHand.ElementAt(0).Id);
-            HandHistory.CardIdTwo =Convert.ToInt32(CardsOnHand.ElementAt(1).Id);
-            HandHistory.CardIdThree =Convert.ToInt32(CardsOnHand.ElementAt(2).Id);
-            HandHistory.CardIdFour =Convert.ToInt32(CardsOnHand.ElementAt(3).Id);
-            HandHistory.CardIdFive =Convert.ToInt32(CardsOnHand.ElementAt(4).Id);
-            counter++;
-            HandHistory.Round = counter;
+            HandHistory.CardIdOne = Convert.ToInt32(CardsOnHand.ElementAt(0).Id);
+            HandHistory.CardIdTwo = Convert.ToInt32(CardsOnHand.ElementAt(1).Id);
+            HandHistory.CardIdThree = Convert.ToInt32(CardsOnHand.ElementAt(2).Id);
+            HandHistory.CardIdFour = Convert.ToInt32(CardsOnHand.ElementAt(3).Id);
+            HandHistory.CardIdFive = Convert.ToInt32(CardsOnHand.ElementAt(4).Id);
+            _roundCounter++;
+            HandHistory.Round = _roundCounter;
 
-           await HandHistoryHttpService.CreateHandHistoryAsync(HandHistory);
+            await HandHistoryHttpService.CreateHandHistoryAsync(HandHistory);
         }
     }
 }

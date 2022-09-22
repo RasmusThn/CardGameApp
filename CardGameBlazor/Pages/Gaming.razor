@@ -1,25 +1,30 @@
 ﻿@page "/gamingpage"
 
+@if (!_showCard)
+{
+    
 <h3>GamingPage</h3>
 
-<button @onclick="TakeCards">Take</button>
+<button class="btn btn-primary" @onclick="TakeCards">Shuffle Cards</button>
+}
 
 @if (_showCard)
 {
-    <div class="form-check">
+    <div class="form-check row " >
         @foreach (var card in CardsOnHand)
         {
-            <label class="container">
-
-                <input class="form-check-input" type="checkbox"
-                @bind-value="@card.IsActive">
-                
+            <label class="col-sm-2 m-1" style="width:150px;">
 
                 <CardComponent Card="@card"></CardComponent>
-               
+                <input class="form-check-input" type="checkbox"  checked="@card.IsActive" 
+                @bind-value="@card.IsActive" id="TossCard">
+
+
+                <label class="form-check-label btn " for="TossCard">Toss</label>
             </label>
 
 
         }
     </div>
+    <button class="btn btn-danger align-content-center" @onclick="TossCards">Toss</button>
 }

@@ -12,7 +12,7 @@ namespace Entites.Models
         public int Id { get; set; }
         public CardSuit Suit { get; set; }
         public CardNumber Number { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = false;
         public string ImgUrl { get; set; }
 
     }

@@ -51,7 +51,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 1,
                             ImgUrl = "/images/hearts/ace.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 14,
                             Suit = 0
                         },
@@ -59,7 +59,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 2,
                             ImgUrl = "/images/hearts/2.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 2,
                             Suit = 0
                         },
@@ -67,7 +67,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 3,
                             ImgUrl = "/images/hearts/3.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 3,
                             Suit = 0
                         },
@@ -75,7 +75,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 4,
                             ImgUrl = "/images/hearts/4.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 4,
                             Suit = 0
                         },
@@ -83,7 +83,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 5,
                             ImgUrl = "/images/hearts/5.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 5,
                             Suit = 0
                         },
@@ -91,7 +91,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 6,
                             ImgUrl = "/images/hearts/6.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 6,
                             Suit = 0
                         },
@@ -99,7 +99,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 7,
                             ImgUrl = "/images/hearts/7.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 7,
                             Suit = 0
                         },
@@ -107,7 +107,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 8,
                             ImgUrl = "/images/hearts/8.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 8,
                             Suit = 0
                         },
@@ -115,7 +115,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 9,
                             ImgUrl = "/images/hearts/9.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 9,
                             Suit = 0
                         },
@@ -123,7 +123,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 10,
                             ImgUrl = "/images/hearts/10.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 10,
                             Suit = 0
                         },
@@ -131,7 +131,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 11,
                             ImgUrl = "/images/hearts/jack.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 11,
                             Suit = 0
                         },
@@ -139,7 +139,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 12,
                             ImgUrl = "/images/hearts/queen.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 12,
                             Suit = 0
                         },
@@ -147,7 +147,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 13,
                             ImgUrl = "/images/hearts/king.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 13,
                             Suit = 0
                         },
@@ -155,7 +155,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 14,
                             ImgUrl = "/images/diamonds/ace.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 14,
                             Suit = 2
                         },
@@ -163,7 +163,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 15,
                             ImgUrl = "/images/diamonds/2.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 2,
                             Suit = 2
                         },
@@ -171,7 +171,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 16,
                             ImgUrl = "/images/diamonds/3.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 3,
                             Suit = 2
                         },
@@ -179,7 +179,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 17,
                             ImgUrl = "/images/diamonds/4.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 4,
                             Suit = 2
                         },
@@ -187,7 +187,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 18,
                             ImgUrl = "/images/diamonds/5.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 5,
                             Suit = 2
                         },
@@ -195,7 +195,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 19,
                             ImgUrl = "/images/diamonds/6.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 6,
                             Suit = 2
                         },
@@ -203,7 +203,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 20,
                             ImgUrl = "/images/diamonds/7.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 7,
                             Suit = 2
                         },
@@ -211,7 +211,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 21,
                             ImgUrl = "/images/diamonds/8.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 8,
                             Suit = 2
                         },
@@ -219,7 +219,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 22,
                             ImgUrl = "/images/diamonds/9.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 9,
                             Suit = 2
                         },
@@ -227,7 +227,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 23,
                             ImgUrl = "/images/diamonds/10.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 10,
                             Suit = 2
                         },
@@ -235,7 +235,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 24,
                             ImgUrl = "/images/diamonds/jack.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 11,
                             Suit = 2
                         },
@@ -243,7 +243,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 25,
                             ImgUrl = "/images/diamonds/queen.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 12,
                             Suit = 2
                         },
@@ -251,7 +251,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 26,
                             ImgUrl = "/images/diamonds/king.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 13,
                             Suit = 2
                         },
@@ -259,7 +259,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 27,
                             ImgUrl = "/images/spades/ace.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 14,
                             Suit = 3
                         },
@@ -267,7 +267,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 28,
                             ImgUrl = "/images/spades/2.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 2,
                             Suit = 3
                         },
@@ -275,7 +275,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 29,
                             ImgUrl = "/images/spades/3.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 3,
                             Suit = 3
                         },
@@ -283,7 +283,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 30,
                             ImgUrl = "/images/spades/4.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 4,
                             Suit = 3
                         },
@@ -291,7 +291,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 31,
                             ImgUrl = "/images/spades/5.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 5,
                             Suit = 3
                         },
@@ -299,7 +299,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 32,
                             ImgUrl = "/images/spades/6.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 6,
                             Suit = 3
                         },
@@ -307,7 +307,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 33,
                             ImgUrl = "/images/spades/7.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 7,
                             Suit = 3
                         },
@@ -315,7 +315,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 34,
                             ImgUrl = "/images/spades/8.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 8,
                             Suit = 3
                         },
@@ -323,7 +323,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 35,
                             ImgUrl = "/images/spades/9.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 9,
                             Suit = 3
                         },
@@ -331,7 +331,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 36,
                             ImgUrl = "/images/spades/10.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 10,
                             Suit = 3
                         },
@@ -339,7 +339,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 37,
                             ImgUrl = "/images/spades/jack.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 11,
                             Suit = 3
                         },
@@ -347,7 +347,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 38,
                             ImgUrl = "/images/spades/queen.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 12,
                             Suit = 3
                         },
@@ -355,7 +355,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 39,
                             ImgUrl = "/images/spades/king.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 13,
                             Suit = 3
                         },
@@ -363,7 +363,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 40,
                             ImgUrl = "/images/clubs/ace.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 14,
                             Suit = 1
                         },
@@ -371,7 +371,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 41,
                             ImgUrl = "/images/clubs/2.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 2,
                             Suit = 1
                         },
@@ -379,7 +379,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 42,
                             ImgUrl = "/images/clubs/3.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 3,
                             Suit = 1
                         },
@@ -387,7 +387,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 43,
                             ImgUrl = "/images/clubs/4.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 4,
                             Suit = 1
                         },
@@ -395,7 +395,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 44,
                             ImgUrl = "/images/clubs/5.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 5,
                             Suit = 1
                         },
@@ -403,7 +403,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 45,
                             ImgUrl = "/images/clubs/6.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 6,
                             Suit = 1
                         },
@@ -411,7 +411,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 46,
                             ImgUrl = "/images/clubs/7.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 7,
                             Suit = 1
                         },
@@ -419,7 +419,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 47,
                             ImgUrl = "/images/clubs/8.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 8,
                             Suit = 1
                         },
@@ -427,7 +427,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 48,
                             ImgUrl = "/images/clubs/9.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 9,
                             Suit = 1
                         },
@@ -435,7 +435,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 49,
                             ImgUrl = "/images/clubs/10.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 10,
                             Suit = 1
                         },
@@ -443,7 +443,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 50,
                             ImgUrl = "/images/clubs/jack.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 11,
                             Suit = 1
                         },
@@ -451,7 +451,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 51,
                             ImgUrl = "/images/clubs/queen.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 12,
                             Suit = 1
                         },
@@ -459,7 +459,7 @@ namespace CardGameApi.Migrations
                         {
                             Id = 52,
                             ImgUrl = "/images/clubs/king.png",
-                            IsActive = true,
+                            IsActive = false,
                             Number = 13,
                             Suit = 1
                         });
