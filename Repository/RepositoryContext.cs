@@ -20,6 +20,5 @@ public class RepositoryContext : DbContext
         modelBuilder.ApplyConfiguration(new CardConfiguration());
     }
     public DbSet<Card>? Cards { get; set; }
-   // public DbSet<CardDeck>? Decks { get; set; }
     public DbSet<HandHistory> HandHistories { get; set; }
 }

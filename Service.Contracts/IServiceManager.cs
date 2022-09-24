@@ -9,7 +9,6 @@ namespace Service.Contracts
     public interface IServiceManager
     {
         ICardService CardService { get; }
-        ICardDeckService CardDeckService { get; }
         IHandHistoryService HandHistoryService { get; }
 
     }
