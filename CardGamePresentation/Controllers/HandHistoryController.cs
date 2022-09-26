@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
-using Shared.DataTransferObjects;
+using SharedDtos.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;

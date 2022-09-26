@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.DataTransferObjects
+namespace SharedDtos.DataTransferObjects
 {
     public record HandHistoryDto
     //(int Id , int Round, int CardIdOne, int CardIdTwo,

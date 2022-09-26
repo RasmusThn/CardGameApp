@@ -1,4 +1,4 @@
-﻿using Shared.DataTransferObjects;
+﻿using SharedDtos.DataTransferObjects;
 using System.Net.Http.Json;
 
 namespace CardGameBlazor.HttpService

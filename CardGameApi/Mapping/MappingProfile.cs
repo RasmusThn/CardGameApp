@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Entites.Models;
-using Shared.DataTransferObjects;
 using SharedDtos.DataTransferObjects;
 
 namespace CardGameApi.Mapping

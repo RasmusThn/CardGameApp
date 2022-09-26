@@ -2,7 +2,7 @@
 using Contracts;
 using Entites.Models;
 using Service.Contracts;
-using Shared.DataTransferObjects;
+using SharedDtos.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
