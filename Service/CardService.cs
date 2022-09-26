@@ -33,7 +33,6 @@ namespace Service
            
             return cardsDto;
         }
-
         public async Task<CardDto> GetCardAsync(int id, bool trackChanges)
         {
             var card = await GetCardAndCheckIfExists(id, trackChanges);
@@ -42,7 +41,6 @@ namespace Service
 
             return cardDto;
         }
-
         public async Task<CardDto> GetRandomActiveCard(bool trackChanges)
         {
             var cards = await _repository.Card.GetAllCardsAsync(trackChanges);
@@ -56,7 +54,6 @@ namespace Service
 
             return cardDto;
         }
-
         private async Task<Card> GetCardAndCheckIfExists(int id, bool trackChanges)
         {
             var card = await _repository.Card.GetCardAsync(id, trackChanges);

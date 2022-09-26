@@ -12,5 +12,12 @@ namespace CardGameBlazor.HttpService
         {
             await _httpClient.PostAsJsonAsync<HandHistoryDto>("/handhistory", hand);
         }
+
+        public async Task<List<HandHistoryDto>> GetAllHandHistoryAsync()
+        {
+            var hands = await _httpClient.GetFromJsonAsync<IEnumerable<HandHistoryDto>>("/handhistory");
+
+            return hands.ToList();
+        }
     }
 }

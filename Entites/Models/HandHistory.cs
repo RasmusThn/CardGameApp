@@ -11,11 +11,11 @@ namespace Entites.Models
     {
         public int Id { get; set; }
         public int Round { get; set; }
-        public int CardIdOne { get; set; }
-        public int CardIdTwo { get; set; }
-        public int CardIdThree { get; set; }
-        public int CardIdFour { get; set; }
-        public int CardIdFive { get; set; }
-        
+        public string? CardImgUrlOne { get; set; }
+        public string? CardImgUrlTwo { get; set; }
+        public string? CardImgUrlThree { get; set; }
+        public string? CardImgUrlFour { get; set; }
+        public string? CardImgUrlFive { get; set; }
+
     }
 }

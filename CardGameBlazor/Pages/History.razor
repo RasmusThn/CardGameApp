@@ -1,35 +1,13 @@
-﻿@page "/gamingpage"
+﻿@page "/history"
+<PageTitle>History</PageTitle>
 
-@if (!_showCard)
+
+<h3>History</h3>
+@if (HandHistoryList.Count == 0)
 {
-
-    <h3>GamingPage</h3>
-
-    <button class="btn btn-primary" @onclick="TakeCards">Shuffle Cards</button>
+    <p>Loading...</p>
 }
-
-@if (_showCard)
-{
-    <div class="form-check row ">
-        @foreach (var card in CardsOnHand)
-        {
-            <label class="col-sm-2 m-1" style="width:150px;">
-
-                <CardComponent Card="@card"></CardComponent>
-                <input class="form-check-input" type="checkbox" checked="@card.IsActive"
-               @bind-value="@card.IsActive" id="TossCard">
-
-
-                <label class="form-check-label btn " for="TossCard">Toss</label>
-            </label>
-
-
-        }
-    </div>
-    <img src="/images/decks/fulldeck.jpg" class="btn btn-white w-25" @onclick="TossCards">
-}
-
-@if (HandHistoryList.Count > 1)
+else 
 {
 
     <table class="table">
@@ -48,7 +26,7 @@
             {
                 <tr>
                     <td> @item.Round</td>
-                    <td><img src="@item.CardImgUrlOne" style="width:50px; height:70px;"/></td>
+                    <td><img src="@item.CardImgUrlOne" style="width:50px; height:70px;" /></td>
                     <td><img src="@item.CardImgUrlTwo" style="width:50px; height:70px;" /></td>
                     <td><img src="@item.CardImgUrlThree" style="width:50px; height:70px;" /></td>
                     <td><img src="@item.CardImgUrlFour" style="width:50px; height:70px;" /></td>

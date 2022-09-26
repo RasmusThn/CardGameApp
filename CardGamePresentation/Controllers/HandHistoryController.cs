@@ -23,5 +23,12 @@ namespace CardGamePresentation.Controllers
 
             return Ok(createdHand);
         }
+        [HttpGet]
+        public async Task<IActionResult> GetAllHandHistory()
+        {
+            var hands = await _service.HandHistoryService.GetAllHandHistoryAsync(trackChanges: false);
+           
+            return Ok(hands);
+        }
     }
 }

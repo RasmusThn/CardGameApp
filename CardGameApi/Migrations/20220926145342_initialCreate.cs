@@ -4,7 +4,7 @@
 
 namespace CardGameApi.Migrations
 {
-    public partial class initialcreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,11 +31,11 @@ namespace CardGameApi.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Round = table.Column<int>(type: "int", nullable: false),
-                    CardIdOne = table.Column<int>(type: "int", nullable: false),
-                    CardIdTwo = table.Column<int>(type: "int", nullable: false),
-                    CardIdThree = table.Column<int>(type: "int", nullable: false),
-                    CardIdFour = table.Column<int>(type: "int", nullable: false),
-                    CardIdFive = table.Column<int>(type: "int", nullable: false)
+                    CardImgUrlOne = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CardImgUrlTwo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CardImgUrlThree = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CardImgUrlFour = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CardImgUrlFive = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

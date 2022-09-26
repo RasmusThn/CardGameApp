@@ -11,8 +11,8 @@ using Repository;
 namespace CardGameApi.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20220922113902_initialcreate")]
-    partial class initialcreate
+    [Migration("20220926145342_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -475,20 +475,20 @@ namespace CardGameApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CardIdFive")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlFive")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdFour")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlFour")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdOne")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlOne")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdThree")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlThree")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdTwo")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlTwo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Round")
                         .HasColumnType("int");

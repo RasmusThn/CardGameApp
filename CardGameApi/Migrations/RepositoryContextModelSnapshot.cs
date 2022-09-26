@@ -473,20 +473,20 @@ namespace CardGameApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CardIdFive")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlFive")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdFour")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlFour")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdOne")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlOne")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdThree")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlThree")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CardIdTwo")
-                        .HasColumnType("int");
+                    b.Property<string>("CardImgUrlTwo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Round")
                         .HasColumnType("int");

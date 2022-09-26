@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entites.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,10 @@ namespace Repository
         }
 
         public void CreateHandHistory(HandHistory handHistory) => Create(handHistory);
+
+        public async Task<IEnumerable<HandHistory>> GetAllHandHistoryAsync(bool trackChanges) =>
+            await FindAll(trackChanges)
+                .OrderByDescending(h => h.Id)
+                .ToListAsync();
     }
 }

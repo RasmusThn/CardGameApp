@@ -59,6 +59,7 @@ namespace CardGameBlazor.Pages
         }
         private void TossCards()
         {
+            
 
             List<CardDto> tossed = CardsOnHand.Where(t => t.IsActive == true).ToList();
 
@@ -83,14 +84,15 @@ namespace CardGameBlazor.Pages
             _roundCounter++;
             HandHistory = new()
             {
-                CardIdOne = Convert.ToInt32(CardsOnHand.ElementAt(0).Id),
-                CardIdTwo = Convert.ToInt32(CardsOnHand.ElementAt(1).Id),
-                CardIdThree = Convert.ToInt32(CardsOnHand.ElementAt(2).Id),
-                CardIdFour = Convert.ToInt32(CardsOnHand.ElementAt(3).Id),
-                CardIdFive = Convert.ToInt32(CardsOnHand.ElementAt(4).Id),
+                CardImgUrlOne = CardsOnHand.ElementAt(0).ImgUrl,
+                CardImgUrlTwo = CardsOnHand.ElementAt(1).ImgUrl,
+                CardImgUrlThree = CardsOnHand.ElementAt(2).ImgUrl,
+                CardImgUrlFour = CardsOnHand.ElementAt(3).ImgUrl,
+                CardImgUrlFive = CardsOnHand.ElementAt(4).ImgUrl,
                 Round = _roundCounter
             };
             HandHistoryList.Add(HandHistory);
+
             await HandHistoryHttpService.CreateHandHistoryAsync(HandHistory);
         }
     }

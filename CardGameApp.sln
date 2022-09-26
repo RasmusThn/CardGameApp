@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGamePresentation", "Car
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGameBlazor", "CardGameBlazor\CardGameBlazor.csproj", "{E33B7CB1-CF2D-46A9-BCE3-686D1A3462C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGameTest", "CardGameTest\CardGameTest.csproj", "{C5F3E24D-F66F-4E5C-8296-AF89DDA9CAF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{E33B7CB1-CF2D-46A9-BCE3-686D1A3462C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E33B7CB1-CF2D-46A9-BCE3-686D1A3462C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E33B7CB1-CF2D-46A9-BCE3-686D1A3462C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F3E24D-F66F-4E5C-8296-AF89DDA9CAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F3E24D-F66F-4E5C-8296-AF89DDA9CAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F3E24D-F66F-4E5C-8296-AF89DDA9CAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F3E24D-F66F-4E5C-8296-AF89DDA9CAF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{BEFA9DC6-4907-48B3-8D19-DC92CA9D9F1D} = {C0F45873-445C-4144-9354-285314CEE51E}
 		{2BC5AD78-D57B-4160-AD50-04223F81A3D2} = {57C4C7AB-5BF7-4918-956A-9984CFA709D6}
 		{E33B7CB1-CF2D-46A9-BCE3-686D1A3462C2} = {57C4C7AB-5BF7-4918-956A-9984CFA709D6}
+		{C5F3E24D-F66F-4E5C-8296-AF89DDA9CAF9} = {4B91248A-47E3-4BCA-B4DE-475A8F768A70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5439E1EB-E4A1-42E2-86AF-8363C914C2F3}
