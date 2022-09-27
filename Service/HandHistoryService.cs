@@ -23,7 +23,6 @@ namespace Service
             _mapper = mapper;
 
         }
-
         public async Task<HandHistoryDto> CreateHandHistory(HandHistoryDto handHistory)
         {
             var handHistoryEntity = _mapper.Map<HandHistory>(handHistory);
@@ -34,7 +33,6 @@ namespace Service
             var HandHistoryReturn = _mapper.Map<HandHistoryDto>(handHistoryEntity);
             return HandHistoryReturn;
         }
-
         public async Task<IEnumerable<HandHistoryDto>> GetAllHandHistoryAsync(bool trackChanges)
         {
             var hands = await _repository.HandHistory.GetAllHandHistoryAsync(trackChanges);

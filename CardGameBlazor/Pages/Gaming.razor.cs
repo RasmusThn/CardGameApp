@@ -20,24 +20,25 @@ namespace CardGameBlazor.Pages
 
         protected override async Task OnInitializedAsync()
         {
-
             CardsDeckList = await CardHttpService.GetAllCardsAsync();
             ShuffleCardList();
-
         }
-        public async Task TakeCards()
+        private async Task TakeCards()
         {
-            
             int cardsToAdd = 5 - CardsOnHand.Count;
+
             //Adds Remaining cards from deck and shuffles old ones
             if (CardsDeckList.Count < cardsToAdd)
             {
                 int cardsLeft = CardsDeckList.Count;
                 CardsOnHand.AddRange(CardsDeckList.Take(cardsLeft));
                 CardsDeckList.RemoveRange(0, cardsLeft);
+
                 ShuffleTossedCards();
+
                 CardsOnHand.AddRange(CardsDeckList.Take(cardsToAdd - cardsLeft));
             }
+
             //Adds new cards when enough i Deck
             else
             {
@@ -59,13 +60,11 @@ namespace CardGameBlazor.Pages
         }
         private void TossCards()
         {
-            
-
-            List<CardDto> tossed = CardsOnHand.Where(t => t.IsActive == true).ToList();
+            List<CardDto> cardsToToss = CardsOnHand.Where(t => t.IsActive == true).ToList();
 
             CardsOnHand.RemoveAll(t => t.IsActive == true);
 
-            foreach (var toss in tossed)
+            foreach (var toss in cardsToToss)
             {
                 toss.IsActive = false;
                 TossedCards.Add(toss);

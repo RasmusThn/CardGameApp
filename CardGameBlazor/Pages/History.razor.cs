@@ -7,13 +7,13 @@ namespace CardGameBlazor.Pages
     public partial class History
     {
         [Inject]
-       public IHandHistoryHttpService handHistoryHttp { get; set; }
-        public List<HandHistoryDto> HandHistoryList { get; set; }
+       public IHandHistoryHttpService? HandHistoryHttp { get; set; }
+        public List<HandHistoryDto>? HandHistoryList { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
            HandHistoryList = new();
-           HandHistoryList = await handHistoryHttp.GetAllHandHistoryAsync();
+           HandHistoryList = await HandHistoryHttp.GetAllHandHistoryAsync();
         }
     }
 }

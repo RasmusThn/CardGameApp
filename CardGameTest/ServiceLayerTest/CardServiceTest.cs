@@ -15,26 +15,54 @@ namespace CardGameTest.ServiceLayerTest
 {
     public class CardServiceTest
     {
-        private readonly IServiceManager _serviceManager;
-        private readonly Mock<IRepositoryManager> _repositoryManagerMock = new();
-        private readonly Mock<ILoggerManager> _loggerManagerMock = new();
-        private readonly Mock<IMapper> _mapperMock = new();
+
+        private readonly Mock<ICardService> _cardServiceMock = new();
         public CardServiceTest()
         {
-            _serviceManager= new ServiceManager(_repositoryManagerMock.Object,_loggerManagerMock.Object, _mapperMock.Object);
+
+            _cardServiceMock = new Mock<ICardService>();
+
         }
         [Fact]
         public async Task GetCardAsyncTest()
         {
             //Arrange
-            int id = 1;
+
             bool trackchanges = false;
-            Card card1 = new Card();
-           await _serviceManager.CardService.GetCardAsync(id, trackchanges);
+            var cardId = 1;
+            CardDto card1 = new CardDto();
+            var cardreturn = new CardDto()
+            {
+                Id = cardId
+            };
+
+            _cardServiceMock.Setup(x => x.GetCardAsync(cardId, trackchanges))
+                .ReturnsAsync(cardreturn);
             //Act
-           
+            card1 = await _cardServiceMock.Object.GetCardAsync(cardId, trackchanges);
             //Assert
-           
+            Assert.Equal(1, card1.Id);
+
+        }
+        [Fact]
+        public async Task GetAllCardsAsyncTest()
+        {
+            //Arrange
+            bool trackchanges = false;
+            List<CardDto> cardList = new List<CardDto>()
+            {
+                new CardDto() { Id = 1 },
+                new CardDto() { Id = 2 },
+                new CardDto() { Id = 3}
+            };
+            _cardServiceMock.Setup(x => x.GetAllCardsAsync(trackchanges))
+                .ReturnsAsync(cardList);
+
+            //Act
+            List<CardDto> cardListResult = (List<CardDto>)await _cardServiceMock.Object.GetAllCardsAsync(trackchanges);
+
+            //Assert
+            Assert.Equal(cardList, cardListResult);
         }
     }
 }

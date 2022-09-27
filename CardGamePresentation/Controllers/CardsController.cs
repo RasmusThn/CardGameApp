@@ -27,12 +27,6 @@ namespace CardGamePresentation.Controllers
             var card = await _service.CardService.GetCardAsync(id, trackChanges: false);
             return Ok(card);
         }
-        [HttpGet]
-        [Route("/random")]
-        public async Task<IActionResult> GetRandomActiveCard()
-        {
-            var card = await _service.CardService.GetRandomActiveCard(trackChanges: false);
-            return Ok(card);
-        }
+        
     }
 }

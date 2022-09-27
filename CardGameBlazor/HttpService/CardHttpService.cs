@@ -16,10 +16,6 @@ namespace CardGameBlazor.HttpService
             return cards.ToList();
         }
 
-        public async Task<CardDto> GetRandomActiveCardAsync()
-        {
-            var card = await _httpClient.GetFromJsonAsync<CardDto>("/random");
-            return card;
-        }
+       
     }
 }

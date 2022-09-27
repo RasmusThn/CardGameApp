@@ -18,6 +18,7 @@ namespace Service
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
+        
         public CardService(IRepositoryManager repository, ILoggerManager logger,IMapper mapper)
         {
             _repository = repository;
@@ -37,19 +38,6 @@ namespace Service
         {
             var card = await GetCardAndCheckIfExists(id, trackChanges);
             
-            var cardDto = _mapper.Map<CardDto>(card);
-
-            return cardDto;
-        }
-        public async Task<CardDto> GetRandomActiveCard(bool trackChanges)
-        {
-            var cards = await _repository.Card.GetAllCardsAsync(trackChanges);
-            cards = cards.Where(c => c.IsActive == true);
-
-            Random random = new Random();
-            int rndNr = random.Next(0, cards.Count());
-            var card = cards.ElementAt(rndNr);
-
             var cardDto = _mapper.Map<CardDto>(card);
 
             return cardDto;

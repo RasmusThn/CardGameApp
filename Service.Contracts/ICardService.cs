@@ -23,11 +23,5 @@ namespace Service.Contracts
         /// <param name="trackChanges"></param>
         /// <returns></returns>
         Task<CardDto> GetCardAsync(int id,bool trackChanges);
-        /// <summary>
-        /// Returns a Random Card if the prop isActive is set to true
-        /// </summary>
-        /// <param name="trackChanges"></param>
-        /// <returns></returns>
-        Task<CardDto> GetRandomActiveCard(bool trackChanges);
     }
 }

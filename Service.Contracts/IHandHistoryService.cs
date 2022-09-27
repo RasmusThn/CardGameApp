@@ -15,6 +15,11 @@ namespace Service.Contracts
         /// <param name="handHistory"></param>
         /// <returns></returns>
         Task<HandHistoryDto> CreateHandHistory(HandHistoryDto handHistory);
+        /// <summary>
+        /// Returns a List of All HandHistory objects from the DB
+        /// </summary>
+        /// <param name="trackChanges"></param>
+        /// <returns></returns>
         Task<IEnumerable<HandHistoryDto>> GetAllHandHistoryAsync(bool trackChanges);
     }
 }
