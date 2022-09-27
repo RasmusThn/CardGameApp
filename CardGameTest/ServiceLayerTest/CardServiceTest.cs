@@ -19,9 +19,7 @@ namespace CardGameTest.ServiceLayerTest
         private readonly Mock<ICardService> _cardServiceMock = new();
         public CardServiceTest()
         {
-
             _cardServiceMock = new Mock<ICardService>();
-
         }
         [Fact]
         public async Task GetCardAsyncTest()
