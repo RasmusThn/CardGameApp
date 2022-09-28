@@ -40,25 +40,6 @@ namespace CardGameTest.PresentationTest.BlazorTest.HttpServiceTest
             Assert.Equal(historyDtos, result);
 
         }
-        [Fact]
-        public async Task CreateHandHistoryAsyncTests()
-        {
-
-            //Arrange
-            HandHistoryDto handHistoryDto = new HandHistoryDto()
-            {
-                Id = 1,
-                CardImgUrlOne = "hej",
-
-
-            };
-
-            _handHttpMock.Setup(x => x.CreateHandHistoryAsync(handHistoryDto))
-                .Returns(Task.FromResult(handHistoryDto));
-            //Act
-
-
-            //Assert
-        }
+      
     }
 }

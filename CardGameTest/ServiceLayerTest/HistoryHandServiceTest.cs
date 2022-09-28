@@ -41,7 +41,6 @@ namespace CardGameTest.ServiceLayerTest
             Assert.Equal(historyDtos[1].Id, historyDtosResults[1].Id);
             Assert.Equal(historyDtosResults[0].CardImgUrlOne, cardUrlName);
         }
-
         [Fact]
         public async Task CreateHandHistoryAsyncTest()
         {

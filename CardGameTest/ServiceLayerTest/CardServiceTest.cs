@@ -16,7 +16,7 @@ namespace CardGameTest.ServiceLayerTest
     public class CardServiceTest
     {
 
-        private readonly Mock<ICardService> _cardServiceMock = new();
+        private readonly Mock<ICardService> _cardServiceMock;
         public CardServiceTest()
         {
             _cardServiceMock = new Mock<ICardService>();
@@ -42,6 +42,7 @@ namespace CardGameTest.ServiceLayerTest
             Assert.Equal(1, card1.Id);
 
         }
+        
         [Fact]
         public async Task GetAllCardsAsyncTest()
         {

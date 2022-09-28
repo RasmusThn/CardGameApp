@@ -13,7 +13,11 @@ namespace CardGamePresentation.Controllers
     public class CardsController : ControllerBase
     {
         private readonly IServiceManager _service;
-        public CardsController(IServiceManager service) => _service = service;
+        public CardsController(IServiceManager service)
+        {
+            _service = service;
+        } 
+
 
         [HttpGet]
         public async Task<IActionResult> GetCards()
@@ -25,6 +29,7 @@ namespace CardGamePresentation.Controllers
         public async Task<IActionResult> GetCard(int id)
         {
             var card = await _service.CardService.GetCardAsync(id, trackChanges: false);
+            
             return Ok(card);
         }
         
